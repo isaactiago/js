@@ -251,19 +251,32 @@ Readcomentarios()
 async function Readusuarios() {
 
 
-    let usuariosArea = document.querySelector('.usu') ; 
+    let usuariosArea = document.querySelector('.usuarios') ; 
 
     usuariosArea.innerHTML = ' Carregando ... ' ;
-    
 
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/users') ; 
 
-    const json = await response.json() ; 
+    let response = await fetch('https://jsonplaceholder.typicode.com/users') ; 
+
+    let json = await response.json() ; 
 
     if(json.length > 0){
 
-        usuariosArea.innerHTML = 'asdsada'
+        usuariosArea.innerHTML = ' '
+
+        for(let i in json ){
+            let h1 = document.createElement('h1')
+            let p = document.createElement('p') 
+
+            h1.innerHTML = `${json[i].name}`
+
+            p.innerHTML = `${json[i].email}`
+
+
+            usuariosArea.appendChild(h1)
+            usuariosArea.appendChild(p)
+        }
 
     }else{
         usuariosArea.innerHTML = 'ops de errado '
@@ -275,7 +288,64 @@ async function Readusuarios() {
 
 }
 
+async function addUsuarios(name,email){
 
-document.querySelector('#button').addEventListener('click', ()=>{
-    //
+    await fetch(
+        'https://jsonplaceholder.typicode.com/users' , 
+
+        {
+            method : 'POST' , 
+
+            headers : {
+                'Content-Type' : 'application/json'
+            } , 
+
+            body : JSON.stringify({
+                name , 
+                email ,
+                userId : 2
+            })
+        },
+
+        name = document.querySelector('#namefield').value = ' ' ,
+        email = document.querySelector('#email').value = ' ' , 
+
+        Readusuarios() ,
+
+
+    )
+
+}
+
+
+document.querySelector('#button').addEventListener('click',()=>{
+    const name = document.querySelector('#namefield').value ; 
+    const email = document.querySelector('#email').value ; 
+
+    if(name && email){
+
+        addUsuarios(name,email) ;
+    }else {
+        alert('preenecha os campos !!!')
+    }
+
 })
+
+
+
+document.querySelector('.buttonsenha').addEventListener('click', ()=>{
+   let senha =  document.querySelector('.senha');
+   const button = document.querySelector('.buttonsenha')
+
+    if(senha.getAttribute('type') === 'password'){
+        senha.setAttribute('type','text')
+        button.innerHTML = ' oclta senha'
+    }else {
+        senha.setAttribute('type','password')
+        button.innerHTML = 'Mostrar senha'
+        
+    }
+})
+
+
+Readusuarios()
