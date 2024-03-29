@@ -248,18 +248,34 @@ Readcomentarios()
 // https://jsonplaceholder.typicode.com/users
 
 
-async function Readusuarios(){
+async function Readusuarios() {
 
 
-    let usuarios = document.querySelector('.usuarios') ; 
+    let usuariosArea = document.querySelector('.usu') ; 
 
-    usuarios.innerHTML = 'Carregando ...'
+    usuariosArea.innerHTML = ' Carregando ... ' ;
+    
 
 
     const response = await fetch('https://jsonplaceholder.typicode.com/users') ; 
 
     const json = await response.json() ; 
 
+    if(json.length > 0){
+
+        usuariosArea.innerHTML = 'asdsada'
+
+    }else{
+        usuariosArea.innerHTML = 'ops de errado '
+    }
+
     
 
+
+
 }
+
+
+document.querySelector('#button').addEventListener('click', ()=>{
+    //
+})
