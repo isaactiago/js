@@ -140,6 +140,8 @@ document.querySelector('.inserir').addEventListener('click', inserir)
 // https://jsonplaceholder.typicode.com/comments
 
 
+/*
+
 
 
 
@@ -238,3 +240,26 @@ document.querySelector('#button').addEventListener('click', () =>{
 
 Readcomentarios()
 
+*/
+
+
+
+
+// https://jsonplaceholder.typicode.com/users
+
+
+async function Readusuarios(){
+
+
+    let usuarios = document.querySelector('.usuarios') ; 
+
+    usuarios.innerHTML = 'Carregando ...'
+
+
+    const response = await fetch('https://jsonplaceholder.typicode.com/users') ; 
+
+    const json = await response.json() ; 
+
+    
+
+}
