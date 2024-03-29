@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input{
+            width: 500px;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #999 ;
+            border-bottom: #555;
+            outline: 0;
+            background-color: white;
+        }
+
+
+        .button {
+            position: fixed;
+            top: 48%;
+            right: 24%;
+           width: 40px;
+           height: 30px;
+           background-image: url('password.png');
+           background-size: contain;
+           background-position: center;
+           background-repeat: no-repeat;
+           border: 0;
+           background-color: transparent;
+           outline: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>formulario</h1>
+
+            <input type="text"
+                 name="nome"
+                placeholder="Nome completo "
+            >
+
+            <input class="senha" 
+            
+                type="password" name="senha" ;
+                placeholder="senha" 
+
+                
+            >
+            <button class="button" onclick="clicar()">
+               
+            </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

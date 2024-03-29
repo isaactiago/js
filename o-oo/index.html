@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fightarea{
+             display: flex;
+             gap: 20px;
+   
+        }
+
+        #char , #monster {
+              flex: 1;
+        }
+
+
+        .lifebar{
+            height: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        .lifebar .bar {
+             height: inherit;
+             background-color: red;
+             border-radius: 5px;
+        }
+
+
+        .log{
+            border: 1px dotted #999;
+            height: 200px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="fightarea">
+        <div id="char">
+            <div class="lifebar">
+                <div class="bar" style="width: 10%;"></div>
+            </div>
+          
+            <strong class="name">--</strong>
+            <div>
+                
+                <button class="attackbutton">Atacar</button>
+            
+            </div>
+        </div>
+
+        <div id="monster">
+            <div id="char">
+                <div class="lifebar">
+                    <div class="bar" style="width: 10%;"></div>
+                </div>
+               
+                <strong class="name">--</strong>
+                <div>
+                    
+                    <button class="attackbutton">Atacar</button>
+                
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    
+    <ul class="log">  </ul>
+
+    <script src="funcoes.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
