@@ -8,12 +8,18 @@
         div{
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        .tempo{
+        button{
+            width: 100px;
+        }
+
+        .demo{
             width: 300px;
             height: 300px;
-            border-radius: 50%;
+            
             border: 1px solid #999;
         }
 
@@ -26,8 +32,9 @@
     
     <h1>hello world </h1>
 
+    <!-- 
 
-    <div>
+         <div>
 
 
 
@@ -40,6 +47,19 @@
         <button onclick="iniciar()">iniciar</button>
         <button onclick="parar()">Parar</button>
     </div>
+
+     -->
+
+    <div>
+
+        <button onclick="iniciar()">click aqui</button>
+        <button onclick="parar()">parar</button>
+
+        <button class="demo"></button>
+    </div> 
+
+    
+   
 
     <script src="pra.js"></script>
 </body>

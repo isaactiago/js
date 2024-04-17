@@ -1,0 +1,55 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: dodgerblue;
+}
+
+h1{
+   text-align: center;
+   margin-top: 5%;
+   color: white;
+}
+
+.container{
+    margin: auto;
+    margin-top: 20PX;
+    display: flex;
+    flex-direction: column;
+    padding: 20PX;
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    border-radius: 10PX;
+}
+
+P{
+    margin-bottom: 20px;
+}
+
+.sexoo{
+
+    margin-bottom: 20px;
+}
+
+
+button{
+
+    display: inline-flex;
+    text-align: center;
+    width: 80px;
+    padding: 2px;
+    margin-bottom: 40px;
+}
+
+.area{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+

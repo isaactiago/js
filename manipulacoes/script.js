@@ -431,6 +431,8 @@ console.log(nome,sobrenome,idade)
 
 // aula 17 -- Descontruindo Objetos (2/2)
 
+/* 
+
 let pessoa = {
 
   nome:'isaac' ,
@@ -450,6 +452,8 @@ let pessoa = {
  
 }
 
+*/
+
 
 //let {facebook, istagram} = pessoa.social  ou 
 
@@ -463,6 +467,7 @@ let pessoa = {
 
 //console.log(nome,idade,istagram,seguidores) ;
 
+/* 
 function pegarNomeCompleto({nome,sobrenome,social:{istagram :{url:istagram}}}){ //desconstruindo em funções
  // return obj.nome + ' ' +obj.sobrenome ;
 
@@ -473,8 +478,183 @@ function pegarNomeCompleto({nome,sobrenome,social:{istagram :{url:istagram}}}){ 
 console.log(pegarNomeCompleto(pessoa))
 
 
+*/
 
 
+// aula 18 -- Descontruindo Arrays 
+
+
+//let info = ['isaac wandermurem', ' isaac' , 'wandermurem', '@isaactwzim'] ;
+
+//let [nomeCompleto, nome,sobrenome, istagram] = info //na hora de descontreuir eu precisso dar um nome 
+
+//console.log(nomeCompleto, nome, sobrenome, istagram)
+
+
+//let [nomeCompleto,  , ,  istagram] = info ; 
+
+//console.log(nomeCompleto, istagram)
+
+
+/* 
+
+function criar(){
+  let a = [1,2,3] ;
+
+  return a
+}
+
+let [a,b,c] = criar() ;
+
+
+console.log(a,b,c)
+
+
+*/
+
+
+//aula 20 operador Spread 
+
+
+/* 
+let numeros = [1,2,3,4] ; 
+
+let outros = [...numeros , 5,6,7,8] ; //vai junsta arrays 
+
+console.log(outros)
+
+
+
+
+*/
+
+/* 
+
+let info = {
+  nome : 'isaac' ,
+  sobrenome : 'wander' ,
+  idade : 18 ,
+}
+
+
+let novainfo = {
+  ...info , 
+
+  cidade : 'pinheiros' ,
+  estado : 'ES' ,
+  pais : 'brasil ' , 
+}
+
+
+
+console.log(novainfo)
+
+
+*/
+
+/* 
+
+function adicionaInfo(info){
+
+  let novaInfo = {
+    ...info ,
+
+    data_cadastro : 22 ,
+    tokken : 'dsfs' , 
+    senha : 123 ,
+  }
+
+  return novaInfo
+
+
+}
+
+console.log(adicionaInfo({nome:'isaac' , sobrenome : 'wandermurem'})) ;
+
+
+
+
+*/
+
+
+
+
+
+
+//aula 21  -- Operador Reset
+
+/* 
+function adicionar(...numeros){
+  console.log(numeros)
+}
+
+adicionar(1,2,3,4,5,6,7,8,9,0)
+
+
+*/
+
+
+
+
+
+//aula 22 includes e Repeat 
+
+
+/* 
+
+let lista = ['ovo', 'cafe', 'arroz', 'fdeijao' , 'macarrao'] ;
+
+//console.log(lista.includes('ovo')) // o includes vai retorna true ou false 
+//se usa o includes pra saber se algo existe no seu array ou outra coisa
+
+const nome = 'isaac'
+console.log(nome.repeat(100)) //repete algo quantas vezes voce quiser 
+
+*/
+
+
+
+// aula 23 -- Objeto: Key, Values e Entries
+
+/* 
+
+let lista = ['ovo', 'macarrao', 'feijao', 'pipoca']
+
+console.log(Object.entries(lista)) 
+
+
+///keys = retorna a chave '
+
+
+*/
+
+
+
+//aula 24 -- String, padStart, padEnd 
+
+
+//let tel = '5' ; 
+
+//console.log(tel.padEnd(9, '*')) //vai preecnher a string até chegar no minimo
+
+//padstart = vai preencher no inicio
+
+/* 
+
+let cartao = '1234123412341234'
+ 
+let lastdigitos = cartao.slice(-4)
+
+let cartaoMascarado = lastdigitos.padStart(16, '*')
+
+
+
+console.log('Este é o seu cartao ? ' + cartaoMascarado)
+
+
+
+
+*/
 
 
 
