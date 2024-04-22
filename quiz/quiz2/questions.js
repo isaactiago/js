@@ -2,7 +2,7 @@ let questions = [
 
     {
 
-         question : 'Qual dos seguintes é um exemplo de um indicador financeiro chave para medir a saúde financeira de uma empresa?' ,
+         question : '  Qual dos seguintes é um exemplo de um indicador financeiro chave para medir a saúde financeira de uma empresa?' ,
 
          options: [
 
@@ -12,11 +12,12 @@ let questions = [
             'Tempo médio de permanência no site',
 
          ] ,
+         answer : 1 , 
     } ,
 
     {
 
-         answer : 1 , 
+         
 
          question : 'O que o acrônimo CRM representa no contexto empresarial?' ,
 
@@ -62,7 +63,7 @@ let questions = [
          ] ,
 
          answer : 0 , 
-    }
+    },
 
     {
 
