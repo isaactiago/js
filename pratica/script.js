@@ -220,6 +220,9 @@ c('.pizzaInfo--addButton').addEventListener("click", ()=>{
 
 function updateCart(){
 
+    //parte so do mobile, que vai fazer aparecer a quantidade de items para o carrinho 
+    c(".menu-openner span").innerHTML = cart.length;
+
     //verirfica se tenho itens no carrinho 
     //se tiver eu abro o carrinho
     if(cart.length > 0){
@@ -266,26 +269,91 @@ function updateCart(){
             cartItem.querySelector('.cart--item img').src = pizzaItem.img ; 
             cartItem.querySelector(".cart--item-nome").innerHTML = pizzaname ; 
             cartItem.querySelector('.cart--item--qt').innerHTML = modalQt ; 
+            cartItem.querySelector(".cart--item--qt").innerHTML = cart[i].qt
 
+            //adiciona as funções de almenta/diminuir  q quantidade 
+            cartItem.querySelector(".cart--item-qtmais").addEventListener("click",()=>{
+
+                cart[i].qt++ ; 
+                updateCart() ; 
+            }) ;
+
+            cartItem.querySelector(".cart--item-qtmenos").addEventListener("click",()=>{
+
+                if(cart[i].qt > 1){
+
+                    cart[i].qt-- ; 
+                   
+                }else{
+                    //removo o carrinho 
+                    cart.splice(i,1)
+                }
+
+                updateCart() ; 
+             
+            })
+
+
+            //calculando o subtotal 
+            subtotal += pizzaItem.price * cart[i].qt
 
 
             
         }
 
+        desconto = subtotal *0.1 ;
+        total = subtotal - desconto ;
+
+        c(".subtotal span:last-child").innerHTML = `R$${subtotal.toFixed(2)}`
+        c(".desconto span:last-child").innerHTML = `R$${desconto.toFixed(2)}`
+        c(".total span:last-child").innerHTML = `R$${total.toFixed(2)}`
+
        c(".cart--item").cloneNode(true) ;
+
+
     }else{
 
-        c("aside").classList.remove("show")
+        c("aside").classList.remove("show") ;
+        c("aside").style.left = "100vw" ;
 
     }
 
 }
 
 
+//abrir o carrinho no celula
+document.querySelector(".menu-openner").addEventListener("click", ()=>{
+
+   if(cart.length > 0){
+
+        c("aside").style.left = "0" ;
+
+   }
+})
+
+
+//fecha o carrinho no celula
+
+c(".menu-closer").addEventListener("click",()=>{
+
+    c("aside").style.left = "100vw"
+
+})
+
 
   
 
 
    
+
+
+
+
+
+
+
+
+
+
 
 
