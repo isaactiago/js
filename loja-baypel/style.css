@@ -13,6 +13,10 @@ body {
     min-height:100vh;
 }
 
+img{
+    width: 400px;
+}
+
 
 .models{
     display: none;
@@ -50,17 +54,87 @@ header{
     font-size: 30px;
 }
 
+.cart {
+    margin-bottom:20px;
+   
+}
+.cart--item {
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+}
+.cart--item img {
+    width:40px;
+    height:40px;
+    margin-right:20px;
+}
+.cart--item-nome {
+    flex:1;
+}
+.cart--item--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+.cart--item--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color: black;
+}
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart--totalitem {
+    padding:15px 0;
+    border-top:1px solid #79b9dd;
+    color:#315970;
+    display:flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+.cart--totalitem span:first-child {
+    font-weight: bold;
+}
+.cart--totalitem.big {
+    font-size:20px;
+    color: white;
+    font-weight: bold;
+}
+.cart--finalizar {
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#FF7534;
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    border:2px solid #FF7534;
+    transition: all ease .2s;
+}
+.cart--finalizar:hover {
+    background-color:#FF7534;
+}
+
 
 
 
 aside {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 0;
     right: 0;
-    bottom: 0;
-    background-color:#9ccbe6;
-    width: ;
+    bottom: 0%;
+    background-color: #0b7ea1;
+    color: white;
     font-family:'Hepta Slab', Helvetica, Arial;
     transition:all ease .2s;
     overflow-x:hidden;
@@ -81,7 +155,7 @@ main{
 }
 
 .titulo{
-    background-color:/* #FF7534 #333C83 */#06179e ;
+    background-color:/* #FF7534 #333C83 */ #274895 ;
     color: white;
     margin: 0;
     position: fixed;
