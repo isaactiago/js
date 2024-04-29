@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+header{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+    background-color: #ccc;
+
+}
+
+.header{
+    height: 50px;
+    background-color: red;
+}
+
+.slider{
+    flex: 1;
+    overflow: hidden; /* Para ignora os item que passarem e nao ter barra de reolagem  */
+}
+.slider--width{
+    height: 100%; /* A altura pé 100% do espaço disponivel */
+    display: flex; /* Imagen fique ao lado da ooutro  */
+    transition: all ease 0.3s; /* A transferencia de margin-left quando eu de vai ser esse tempo ai  */
+}
+
+.slider--item{
+    width: 100vw; /* A largura da foto vai ser a largura do monitor disponivel  */
+    height: inherit ; /* A altura vai ser a mesma do slider--width. estou herdando a altura pai */
+    background-position: center;
+    background-size: cover;
+}
+
+.slide--controls{
+    position: absolute; /* Para ficar acima da tela  */
+    z-index: 99; /*pra ficar acima da foto  */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide--control{
+    width: 50px; /*  */
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
