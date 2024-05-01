@@ -9,7 +9,7 @@ header{
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100vw;
+    height: 600px;
     background-color: #ccc;
 
 }
@@ -22,11 +22,13 @@ header{
 .slider{
     flex: 1;
     overflow: hidden; /* Para ignora os item que passarem e nao ter barra de reolagem  */
+    
 }
 .slider--width{
     height: 100%; /* A altura pé 100% do espaço disponivel */
     display: flex; /* Imagen fique ao lado da ooutro  */
     transition: all ease 0.3s; /* A transferencia de margin-left quando eu de vai ser esse tempo ai  */
+   
 }
 
 .slider--item{
@@ -39,7 +41,7 @@ header{
 .slide--controls{
     position: absolute; /* Para ficar acima da tela  */
     z-index: 99; /*pra ficar acima da foto  */
-    width: 100%;
+    max-width: 99%;
     display: flex;
     justify-content: space-between;
     align-items: center;
